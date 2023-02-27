@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="HardcodedText,RtlHardcoded"
+            tools:layout_editor_absoluteX="-44dp"
+            tools:layout_editor_absoluteY="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/input_view"
+                android:text="0"
+                android:textSize="48sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Result="
+                    android:textSize="48sp" />
+
+                <TextView
+                    android:id="@+id/result_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textSize="48sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/clear_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:onClick="clear"
+                    android:text="Clear" />
+
+                <Button
+                    android:id="@+id/one_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/clear_button"
+                    android:onClick="one"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/two_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/one_button"
+                    android:onClick="two"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/three_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/two_button"
+                    android:onClick="three"
+                    android:text="3" />
+
+                <Button
+                    android:id="@+id/four_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/clear_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:onClick="four"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/five_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/one_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/four_button"
+                    android:onClick="five"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/six_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/two_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/five_button"
+                    android:onClick="six"
+                    android:text="6" />
+
+                <Button
+                    android:id="@+id/seven_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/three_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/six_button"
+                    android:onClick="seven"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/eight_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/four_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:onClick="eight"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/nine_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/four_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/eight_button"
+                    android:onClick="nine"
+                    android:text="9" />
+
+                <Button
+                    android:id="@+id/zero_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/four_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/nine_button"
+                    android:onClick="zero"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/plus_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/seven_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/zero_button"
+                    android:onClick="plusSign"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/minus_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/eight_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:onClick="minusSign"
+                    android:text="-" />
+
+                <Button
+                    android:id="@+id/multiply_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nine_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/minus_button"
+                    android:onClick="multiplicationSign"
+                    android:text="*" />
+
+                <Button
+                    android:id="@+id/divide_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/eight_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/multiply_button"
+                    android:onClick="divitionSign"
+                    android:text="/" />
+
+                <Button
+                    android:id="@+id/equal_to_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/eight_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/divide_button"
+                    android:onClick="twoNumbers"
+                    android:text="=" />
+
+                <Button
+                    android:id="@+id/root_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/minus_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:onClick="root"
+                    android:text="root()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/power_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/minus_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/root_button"
+                    android:onClick="power"
+                    android:text="power()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/comma_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/minus_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/power_button"
+                    android:onClick="comma"
+                    android:text="," />
+
+                <Button
+                    android:id="@+id/sin_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/minus_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/comma_button"
+                    android:onClick="sin"
+                    android:text="sin()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/cos_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/root_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:onClick="cos"
+                    android:text="cos()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/tan_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/root_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/cos_button"
+                    android:onClick="tan"
+                    android:text="tan()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/inverse_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/root_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/tan_button"
+                    android:onClick="inverse"
+                    android:text="inv()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/natural_logarithm_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/root_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/inverse_button"
+                    android:onClick="naturalLogarithm"
+                    android:text="ln()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/log_base_ten_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cos_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:onClick="logBase10"
+                    android:text="log10()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/exponential_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cos_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/log_base_ten_button"
+                    android:onClick="exponential"
+                    android:text="exp()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/asin_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cos_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/exponential_button"
+                    android:onClick="asin"
+                    android:text="asin()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/acos_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cos_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/asin_button"
+                    android:onClick="acos"
+                    android:text="acos()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/atan_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/log_base_ten_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:onClick="atan"
+                    android:text="atan()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/sinh_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/log_base_ten_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/atan_button"
+                    android:onClick="sinh"
+                    android:text="sinh()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/cosh_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/log_base_ten_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/sinh_button"
+                    android:onClick="cosh"
+                    android:text="cosh()"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/tanh_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/log_base_ten_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/cosh_button"
+                    android:onClick="tanh"
+                    android:text="tanh()"
+                    android:textAllCaps="false" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
